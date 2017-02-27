@@ -14,4 +14,4 @@ Ensure you have `node` installed.
 
 Ensure you have Jasmine installed globally `npm i -g jasmine`
 
-`npm run test`
+`npm test`
