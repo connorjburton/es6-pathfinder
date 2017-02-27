@@ -8,7 +8,7 @@ Ensure you have `node` installed.
 
 ## Running Example
 
-To run `npm run index`
+`npm run index`
 
 ## Running Tests
 
