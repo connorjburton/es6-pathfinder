@@ -11,8 +11,8 @@ class MazeSolver {
 		this.root = path.resolve(__dirname, '..'); // path to root directory that contains data
 		this.source = source;
 		this.target = new Node({x: target[0], y: target[1]}, true);
-		this.starting;
-		this.matrix;
+		this.starting = null;
+		this.matrix = null;
 	}
 	
 	parseData(cb)
@@ -23,7 +23,7 @@ class MazeSolver {
 			if(err) console.error(new Error(err));
 
 			data = data.split('\n').filter((val) => val); //split on new line & remove any falsey values (e.g empty string at end of file)
-			this.meta = data.shift().split(' ').map((val) => parseInt(val)); // remove first line from data, split, parse as ints then map to `meta`
+			this.meta = data.shift().split(' ').map((val) => parseInt(val, 10)); // remove first line from data, split, parse as ints then map to `meta`
 			data = data.map((row, y) => row.split('').map((val, x) => { //split each row into their own arrays and map them to nodes
 				return new Node({x: x, y: y}, (val === '1'), this.target);
 			}));
