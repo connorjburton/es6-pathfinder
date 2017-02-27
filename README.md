@@ -1,3 +1,5 @@
+[![Code Climate](https://lima.codeclimate.com/github/connorjburton/es6-pathfinder/badges/gpa.svg)](https://lima.codeclimate.com/github/connorjburton/es6-pathfinder)
+
 # ES6 Pathfinder
 
 Using the A* Algorithm with Manhattan Heuristics.
